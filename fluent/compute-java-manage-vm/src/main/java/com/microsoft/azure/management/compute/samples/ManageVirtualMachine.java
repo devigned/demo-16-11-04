@@ -46,7 +46,7 @@ public final class ManageVirtualMachine {
 
         final String windowsVmName = Utils.createRandomName("wVM");
         final String linuxVmName = Utils.createRandomName("lVM");
-        final String rgName = Utils.createRandomName("rgCOMV");
+        final String rgName = Utils.createRandomName("javaFluentDemo");
         final String userName = "tirekicker";
         final String password = "12NewPA$$w0rd!";
         final String dataDiskName = "disk2";
