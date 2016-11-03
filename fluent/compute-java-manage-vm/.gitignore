@@ -36,11 +36,6 @@ local.properties
 .classpath
 .project
 target
-*.iml
-
-# Mac OS #
-.DS_Store
-.DS_Store?
 
 # Windows #
 Thumbs.db
