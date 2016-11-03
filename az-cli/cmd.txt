@@ -1,0 +1,14 @@
+az
+az vm list
+az vm list --out tsv | grep southcentralus | cut -f8
+az vm list --out jsonc
+az vm list --out json | jpterm # [].[name,storageProfile.osDisk.osType]
+az vm list --query "[].{name:name,os:storageProfile.osDisk.osType}"
+az vm list --query [0].id --out tsv
+az vm create -h
+az vm create -g [tabs] -n --image [tab]
+MyIP=$(az vm create -g vmgroup1 -n mydemovm3 --image ubuntults --admin-username ubuntu --query publicIpAddress --out tsv) && ssh ubuntu@$MyIP
+
+
+
+
