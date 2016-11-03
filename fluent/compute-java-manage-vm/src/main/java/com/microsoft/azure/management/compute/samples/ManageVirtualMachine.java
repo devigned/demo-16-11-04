@@ -21,6 +21,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 
 import java.io.File;
 import java.util.Date;
+import java.util.Scanner;
 
 /**
  * Azure Compute sample for managing virtual machines -
@@ -71,6 +72,8 @@ public final class ManageVirtualMachine {
 
             try {
 
+                String sshPath = System.getenv("~/.ssh/id_rsa.pub").replaceFirst("^~",System.getProperty("user.home"));
+                final String sshPubKey = new Scanner(new File(sshPath)).useDelimiter("\\Z").next();
                 //=============================================================
                 // Create a Windows virtual machine
 
