@@ -69,10 +69,9 @@ public final class ManageVirtualMachine {
             // Print selected subscription
             System.out.println("Selected subscription: " + azure.subscriptionId());
 
-
             try {
 
-                String sshPath = System.getenv("~/.ssh/id_rsa.pub").replaceFirst("^~",System.getProperty("user.home"));
+                String sshPath = "~/.ssh/id_rsa.pub".replaceFirst("^~",System.getProperty("user.home"));
                 final String sshPubKey = new Scanner(new File(sshPath)).useDelimiter("\\Z").next();
                 //=============================================================
                 // Create a Windows virtual machine
